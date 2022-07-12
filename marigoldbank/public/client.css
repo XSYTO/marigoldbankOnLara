@@ -1,0 +1,114 @@
+.containerClients {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #F9F9FB;
+}
+
+.clientTable {
+    position: relative;
+    width: 50%;
+    align-self: center;
+    top: 15%;
+    border-radius: 5px;
+    background-color: #F9F9FB;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0px 8px 10px 0px rgb(0 0 0 / 17%);
+}
+
+.clientTable:hover {
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 17%);
+}
+
+.yellowClients {
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  20%, #F09819  100%);
+    /* background-color: #FFC500; */
+    font-size:25px;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.clientList {
+    display:flex;
+    flex-direction: column;
+    margin: 15px;
+    font-size: 18px;
+}
+.clientListPrivate {
+    display:flex;
+    flex-direction: row;
+    /* gap: 15.5%; */
+    margin: 15px;
+    font-size: 18px;
+}
+.ListPrivate {
+    width: 50%;
+}
+.ListPrivateA {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+.ListPrivateB {
+    width: 25%;
+    padding-left: 5.5%;
+}
+.clientListRow {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+.clientListLine {
+    width: 80%;
+}
+.clientListLineBtn {
+    width: 20%;
+}
+
+
+.clientName {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 100%;
+    padding-left: 10px;
+}
+.saskaitos {
+    width: 33.33%;
+}
+
+.sasklinks {
+    display: flex;
+    gap: 30px;
+}
+
+.linksbtn {
+    color: #000;
+    text-decoration: none;
+}
+.linksbtn:hover {
+    color: #EDDE5D;
+}
+
+
+.deletebtn:hover {
+    color: red;
+}
+
+.clientLinks {
+    display: flex;
+    width: 35%;
+    justify-content: end;
+    gap: 30px;
+}
+
+.clientLinks a {
+    text-decoration: none;
+}
