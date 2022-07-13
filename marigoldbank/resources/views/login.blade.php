@@ -1,4 +1,4 @@
-@include('top');
+{{-- @include('top');
 @include('header');
     <section class="container">
         <img src="icons8-money-box-96.png" alt="icon" class="img pulse">
@@ -19,4 +19,4 @@
             </form><br><br>
         </div>
     </section>
-@include('footer');
+@include('footer'); --}}

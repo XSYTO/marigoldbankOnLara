@@ -11,6 +11,11 @@ use Faker\Factory as Faker;
 
 class AccountController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +43,7 @@ class AccountController extends Controller
         $email = $faker->freeEmail;
         $address = $faker->address;
         
-        return view('register')->with('phone', $phone)->with('email', $email)->with('address', $address);
+        return view('registerClient')->with('phone', $phone)->with('email', $email)->with('address', $address);
     }
 
     /**
@@ -59,6 +64,7 @@ class AccountController extends Controller
             'phone' => 'required|max:12',
             'agree' => 'required',
         ]);
+
         // $account = new Account([
         //     'firstname' => $request->get('firstname'),
         //     'lastname' => $request->get('lastname'),
@@ -176,14 +182,14 @@ class AccountController extends Controller
 
     }
 
-    public function home()
-    {
-        return view('home');
-    }
+    // public function home()
+    // {
+    //     return view('home');
+    // }
 
-    public function login()
-    {
-        return view('login');
-    }
+    // public function login()
+    // {
+    //     return view('login');
+    // }
 
 }

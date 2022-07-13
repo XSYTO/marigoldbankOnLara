@@ -1,0 +1,237 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// // Bootstrap
+// @import 'bootstrap/scss/bootstrap';
+
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-image: linear-gradient(to right,#000000 , #130F40); */
+
+}
+
+input {
+    width: 150px;
+    font-size: 14px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.sumInput {
+    font-size: 18px;
+}
+
+.center {
+    text-align: center;
+    vertical-align: baseline;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffff;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 17%);
+    z-index:100;
+}
+
+.header .welcome {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.welcome {
+    position: relative;
+    left: 20%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: #fdae1e;
+    margin:10px;
+}
+
+.links {
+    display: inline;
+    position: relative;
+    left: 5%;
+    top: 50px;
+    font-size: 20px;
+}
+
+.links a {
+    padding: 0px 20px 0px;
+    margin-right: 20px;
+    text-decoration:none;
+    color: #000;
+}
+
+.links a:hover {
+    color: #fdae1e;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #F9F9FB;
+}
+.formParent {
+    position: relative;
+    width: 35%;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #F9F9FB;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0px 8px 10px 0px rgb(0 0 0 / 17%);
+}
+
+.formParent:hover {
+    box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 17%);
+}
+
+.yellow {
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  20%, #F09819  100%);
+    /* background-color: #FFC500; */
+    font-size:25px;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin: 15px;
+}
+
+.img {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 150px;
+    height: 150px;
+}
+
+.forminput {
+    margin-bottom: 25px;
+    width: 150px;
+    align-content: center;
+}
+
+label {
+    width: 125px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffff;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 17%);
+    z-index:100;
+}
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.privatebtn {
+    position: relative;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.accountName {
+    display: flex;
+    flex-direction: row;
+    gap: 15%;
+    width: 50%;
+    position: relative;
+    top: 40px;
+    left: 10%;
+    font-size: 18px;
+}
+
+
+.containerAcc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #F9F9FB;
+}
+
+.badge {
+    position:relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-image: linear-gradient(to right, #F09819 0%, #EDDE5D  20%, #F09819  100%);
+    padding: 15px;
+    font-size: 18px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.balance {
+    display: inline;
+    position:relative;
+    top: 19.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: #ffff;
+    font-size: 18px;
+}
+
+.balanceSum {
+    width: 45%;
+    float: left;
+}
+
+.balanceSum1 {
+    width: 45%;
+    float: left;
+    text-align: end;
+}
+
+.addOrRem {
+    display:flex;
+    flex-direction: row;
+    margin: 15px;
+}

@@ -6,7 +6,7 @@
     <div class="links">
         <a href="home">Pagrindinis</a>
         <a href="clients">Klientų sarašas</a>
-        <a href="register">Registruoti nauja sąskaitą</a>
+        <a href="registerClient">Registruoti nauja sąskaitą</a>
         <a href="login">Prisijungti</a>
     </div>
 </section>

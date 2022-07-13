@@ -5,10 +5,14 @@
         <img src="../marigold1.png" alt="icon" class="">
     </div>
     <div class="links">
-        <a href="../home">Pagrindinis</a>
-        <a href="../clients">Klientų sarašas</a>
-        <a href="../register">Registruoti nauja sąskaitą</a>
-        <a href="../login">Prisijungti</a>
+        <a href="{{route('home')}}">Pagrindinis</a>
+        <a href="{{route('accounts_index')}}">Klientų sarašas</a>
+        <a href="{{route('accounts_create')}}">Registruoti nauja sąskaitą</a>
+        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">Atsijungti</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+        </form>
     </div>
 </section>
 <section class="containerClients">

@@ -23,7 +23,7 @@ Route::get('/home' , [A::class, 'home']);
 Route::get('/login' , [A::class, 'login']);
 
 //accounts
-Route::get('/register' , [A::class, 'create']);
+Route::get('/registerClient' , [A::class, 'create'])->name('accounts_create');
 
 Route::get('/clients' , [A::class, 'index'])->name('accounts_index');
 Route::post('/clients', [A::class, 'store'])->name('accounts_store');
@@ -33,3 +33,7 @@ Route::put('/clients/{account}' , [A::class, 'update'])->name('accounts_update')
 Route::delete('/clients/{account}' , [A::class, 'destroy'])->name('accounts_delete');
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
