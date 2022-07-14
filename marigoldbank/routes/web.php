@@ -23,14 +23,14 @@ Route::get('/home' , [A::class, 'home']);
 Route::get('/login' , [A::class, 'login']);
 
 //accounts
-Route::get('/registerClient' , [A::class, 'create'])->name('accounts_create');
+Route::get('/registerClient' , [A::class, 'create'])->name('accounts_create')->middleware('role:user');
 
-Route::get('/clients' , [A::class, 'index'])->name('accounts_index');
-Route::post('/clients', [A::class, 'store'])->name('accounts_store');
+Route::get('/clients' , [A::class, 'index'])->name('accounts_index')->middleware('role:user');
+Route::post('/clients', [A::class, 'store'])->name('accounts_store')->middleware('role:user');
 
-Route::get('/clients/{account}', [A::class, 'edit'])->name('accounts_add');
-Route::put('/clients/{account}' , [A::class, 'update'])->name('accounts_update');
-Route::delete('/clients/{account}' , [A::class, 'destroy'])->name('accounts_delete');
+Route::get('/clients/{account}', [A::class, 'edit'])->name('accounts_add')->middleware('role:user');
+Route::put('/clients/{account}' , [A::class, 'update'])->name('accounts_update')->middleware('role:user');
+Route::delete('/clients/{account}' , [A::class, 'destroy'])->name('accounts_delete')->middleware('role:admin');
 
 
 

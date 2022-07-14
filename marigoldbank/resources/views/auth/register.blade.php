@@ -17,7 +17,7 @@
         <img src="marigold1.png" alt="icon" class="">
     </div>
     <div class="links">
-        <a href="home">Pagrindinis</a>
+        <a href="{{route('home')}}">Pagrindinis</a>
         <a href="clients">Klientų sarašas</a>
         <a href="registerClient">Registruoti nauja sąskaitą</a>
         <a href="login">Prisijungti</a>
@@ -59,6 +59,13 @@
 
             <label for="password-confirm">Slaptažodis :</label>
             <input id="password-confirm" type="password" class="forminput form-control" name="password_confirmation" required autocomplete="new-password">
+
+            <label for="role">Teises :</label>
+            <select name="role" id="role">
+            <option value="2" selected="selected">Vadybininkas</option>
+            <option value="1" selected="selected">Vyr.Vadybininkas</option>
+            </select>
+
 
             <p class="center"> <input style="vertical-align: baseline" type="checkbox" name="agree">Sutinkate su klientų, duomenų informacijos saugumų <a href="#">Terms & Privacy</a>.</p><br>
                 <input type="hidden" name="_method" value="post">

@@ -30,7 +30,12 @@
                 @isset($message3)
                 {!!$message3!!}
                 @endisset
+                @if($account->cash >= 1000000)
+                    <span style='color:red'>Auksinis Klientas :D</span>
+                @endif
             </div>
+            
+            @if(Auth::user()->role > 4)
             <div class="ListPrivateB">
                 <form action="{{route('accounts_delete', $account)}}" method="post">
                     @csrf
@@ -38,6 +43,8 @@
                     <button type="submit" class="clientBtnD">Ištrinti</button>
                 </form>
             </div>
+            @endif
+
         </div>
     </div>
     <div class="clientTable yellowClients">
@@ -73,6 +80,9 @@
         @endisset
         @isset($message2)
             {!!$message2!!}
+        @endisset
+        @isset($message4)
+            {!!$message4!!}
         @endisset
     </div>
 </section>

@@ -8,15 +8,11 @@
         <a href="{{route('home')}}">Pagrindinis</a>
         <a href="{{route('accounts_index')}}">Klientų sarašas</a>
         <a href="{{route('accounts_create')}}">Registruoti nauja sąskaitą</a>
-        @if (Auth::user()) 
-            <a href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">Atsijungti</a>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">Atsijungti</a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
-            </form>
-        @else 
-            <a href="{{route('login')}}">Prisijungti</a>
-        @endif
+        </form>
     </div>
 </section>
 <section class="container">

@@ -11,10 +11,10 @@ use Faker\Factory as Faker;
 
 class AccountController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Display a listing of the resource.
@@ -137,6 +137,13 @@ class AccountController extends Controller
         } if($request->cash_out < 0) {
             $message2="<span style='color:red'>Įveskite tinkama skaičių</span>";
             return view('edit', ['account' => $account] ,compact('message2'));
+        } if ($request->cash_out >= 10000 && Auth::user()->role > 4) {
+            $account->cash -= $request->cash_out;
+            $account->save();
+            return view('edit', ['account' => $account]);
+        } if ($request->cash_out >= 10000 && Auth::user()->role < 4) {
+            $message4="<span style='color:red'>Reikalingas Vyr.Vadybininko patvirtinimas</span>";
+            return view('edit', ['account' => $account] ,compact('message4'));
         } if ($account->cash >= $request->cash_out) {
             $account->cash += $request->cash;
             $account->cash -= $request->cash_out;
@@ -182,9 +189,9 @@ class AccountController extends Controller
 
     }
 
-    // public function home()
+    // public function main()
     // {
-    //     return view('home');
+    //     return view('main');
     // }
 
     // public function login()
