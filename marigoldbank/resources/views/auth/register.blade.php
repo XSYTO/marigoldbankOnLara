@@ -62,8 +62,8 @@
 
             <label for="role">Teises :</label>
             <select name="role" id="role">
-            <option value="2" selected="selected">Vadybininkas</option>
-            <option value="1" selected="selected">Vyr.Vadybininkas</option>
+            <option value="1" name="user">Vadybininkas</option>
+            <option value="5" name="admin">Vyr.Vadybininkas</option>
             </select>
 
 
