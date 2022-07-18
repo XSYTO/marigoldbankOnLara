@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $iban = 'LT' . '10100' . rand(12345678901, 92345678901);
-        $faker = Faker::create();
+        $faker = Faker::create('lt_LT');
         for ($i = 0; $i < 5; $i++) {
             DB::table('accounts')->insert([
                 'firstname' => $faker->firstName,
